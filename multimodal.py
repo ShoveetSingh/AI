@@ -2,10 +2,13 @@ from google import genai
 
 import pathlib
 import os
+from dotenv import load_dotenv
 
-key = os.getenv('API_KEY')
+load_dotenv()
 
-client= genai.Client(api_key=key)
+API_KEY = os.getenv('API_KEY')
+
+client= genai.Client(api_key=API_KEY)
 
 # img =  client.files.upload(file="images.jpg")
 

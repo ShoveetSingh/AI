@@ -2,6 +2,9 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from google import genai
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 key = os.getenv('API_KEY')
 
